@@ -1,0 +1,31 @@
+.card {
+    padding: 2rem;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            var(--glass-highlight),
+            transparent);
+}
+
+.glow {
+    box-shadow: 0 0 40px rgba(157, 101, 201, 0.1);
+    /* Subtle purple glow */
+}
+
+.glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 40px rgba(232, 74, 95, 0.15);
+    /* shifts to distinct rose glow on hover */
+}
